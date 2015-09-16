@@ -1,0 +1,89 @@
+# FIX
+// access in admin url
+mail
+
+// in backend\models\Product uncomment [['file'], 'file', 'skipOnEmpty' => false],
+
+# BD
+user:
+role_id
+created_at_date
+updated_at_date
+
+role:
+name
+
+category:
+name
+
+product:
+title varchar
+brand varchar
+description TEXT
+short_description TEXT
+image varchar
+image_alt varchar
+slug varchar
+availability tinyint (в наличии / под заказ)
+price DECIMAL(10, 2)
+currency varchar
+vendor varchar
+rating int
+top int
+user_id
+category_id
+
+image:
+name
+alt
+
+product_image:
+product_id
+image_id
+
+review:
+first_name varchar
+last_name varchar
+body TEXT
+status (в модерации / ОК / BAD)
+
+*/
+order:
+quantity smallint
+product_id
+*/
+
+
+
+order:
+id
+first_name varchar
+last_name varchar
+city varchar
+phone varchar
+department varchar
+note varchar
+status smallint (new / done/ process)
+created_at
+updated_at
+created_at_date
+updated_at_date
+
+order_item:
+ * @property integer $id
+ * @property string $title
+ * @property string $price
+ * @property integer $order_id
+ * @property integer $product_id
+ * @property double $quantity
+ *
+
+
+ * @property Product $product
+ * @property Order $order
+
+
+page:
+id
+name
+body
